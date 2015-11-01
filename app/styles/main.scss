@@ -1,0 +1,353 @@
+@import "variable";
+@import "iconfont";
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+//
+html {
+    font-size: 10px
+}
+
+@media screen and (min-width:321px) and (max-width:375px) {
+    html {
+        font-size: 11px
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:414px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:639px) {
+    html {
+        font-size: 15px
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+        font-size: 20px
+    }
+}
+
+@media (min-width: 375px) {
+    .container-fluid {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+}
+
+.btn-more {
+    @include button-variant(#df5e0f, #e9e9e9, transparent);
+    text-decoration: none;
+}
+
+.site-header {
+    .container-fluid {
+        height: 45px;
+        line-height: 45px;
+        background: linear-gradient(to right, #de5411 0%, #eca814 48%, #de5411 100%);
+        overflow: hidden;
+        .iconfont {
+            font-size: 20px;
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+    }
+}
+
+.banner {
+    overflow: hidden;
+}
+
+.main-nav {
+    .col-xs-6 {
+        text-align: center;
+        a {
+            background-color: #f6f6f6;
+            color: inherit;
+            display: block;
+            padding: 30px 0;
+            font-size: 1.6rem;
+            text-decoration: none;
+            &.about,
+            &.zhuanxiangjijin {
+                border-right: 1px solid #dbdbdb;
+            }
+            &.zhuanxiangjijin,
+            &.juanzengzhinan {
+                border-top: 1px solid #dbdbdb;
+            }
+            img.icon {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                &.icon-active {
+                    display: none;
+                }
+            }
+            &:hover,
+            &:active {
+                background-color: #f08416;
+                color: #fff;
+                img.icon {
+                    display: none;
+                    &.icon-active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-us {
+    .container-fluid {
+        background: transparent url('../images/pic07.jpg') left top no-repeat;
+        background-size: cover;
+        height: 50px;
+        line-height: 50px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.6rem;
+            .iconfont {
+                margin-right: 0.6em;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.site-footer {
+    .container-fluid {
+        padding: 10px 0;
+        p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+body.about {
+    .site-footer {
+        .container-fluid {
+            background-color: #c0bfbf;
+        }
+    }
+}
+
+.main-content {
+    .nav-tab {
+        height: 35px;
+        line-height: 35px;
+        &.nav-tab-1 {
+            margin-top: -35px;
+        }
+        .col-xs-6,
+        .nav-tab-item {
+            border-left: 1px solid rgba(48, 48, 48, 0.7);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            &:first-child {
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+            a {
+                color: #fff;
+                font-size: 1.6rem;
+                display: block;
+                background-color: rgba(129, 125, 122, 0.7);
+                &.active {
+                    background-color: rgba(222, 90, 17, 0.7);
+                }
+            }
+        }
+    }
+    .article {
+        padding: 20px 10px;
+        font-size: 1.2rem;
+        p {
+            margin: 5px 0;
+            &.indent {
+                text-indent: 2em;
+            }
+        }
+        h3 {
+            color: #e0640d;
+            font-size: 1.5rem;
+        }
+        &.article-juanzeng {
+            h1 {
+                font-size: 1.5rem;
+                color: #f18800;
+                font-weight: normal;
+                margin-top: 10px;
+            }
+            h2 {
+                font-size: 1.3rem;
+                color: #84ac09;
+                font-weight: normal;
+                border-bottom: 1px solid #cccccc;
+                padding-bottom: 8px;
+                strong {
+                    border-bottom: 1px solid #84ac09;
+                    padding-bottom: 8px;
+                }
+            }
+            p {
+              font-size: 1.2rem;
+            }
+        }
+        &.article-lianxiwomen {
+          p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            .iconfont {
+              margin-right: 8px;
+            }
+          }
+        }
+    }
+    .article-list {
+        font-size: 1.2rem;
+        margin: 15px 0;
+        border-top: 1px solid #cecece;
+        li {
+            line-height: 3.6rem;
+            a {
+                color: inherit;
+                display: block;
+                text-decoration: none;
+                padding: 0px 10px;
+                border-bottom: 1px solid #cecece;
+                &:hover,
+                &:active {
+                    background-color: #f08416;
+                    color: #fff;
+                    .iconfont {
+                        color: #fff;
+                    }
+                }
+                .iconfont {
+                    color: #b5b5b5;
+                    font-size: 1.2rem;
+                    margin-right: 5px;
+                }
+            }
+        }
+        &.article-list-a {
+            border-top: none;
+            li {
+                a {
+                    border-bottom: 1px dotted #cecece;
+                    &:hover,
+                    &:active {
+                        background-color: transparent;
+                        color: #e3760e;
+                        .iconfont {
+                            color: #b5b5b5;
+                        }
+                    }
+                }
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        &.article-list-media {
+            border-top: none;
+            padding: 0px 10px;
+            li {
+                .media {
+                    border-bottom: 1px solid #cecece;
+                    padding-bottom: 1rem;
+                    padding-top: 1rem;
+                    .media-left {
+                        padding-right: 0;
+                        a {
+                            border: none;
+                            padding-left: 0;
+                            &:hover,
+                            &:active {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                    .media-body {
+                        .media-heading {
+                            font-size: 1.4rem;
+                        }
+                        p {
+                            font-size: 1.2rem;
+                            line-height: 1.5;
+                            color: #666666;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sub-nav {
+    .nav-tab {
+        .col-xs-4 {
+            border-left: 1px solid #444444;
+            border-right: 1px solid #747474;
+            line-height: 3.5rem;
+            &:first-child {
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+            a {
+                display: block;
+                background-color: #515151;
+                color: #fff;
+                font-size: 1.6rem;
+            }
+            &.active {
+                a {
+                    background-color: #d4d2d1;
+                    color: #df5911;
+                }
+            }
+        }
+    }
+}
+
+.slick-slider {
+    margin-bottom: 0;
+    .slick-dots {
+        bottom: -10px;
+        li {
+            width: 10px;
+            button {
+                &:before {
+                    color: #595a5a;
+                    @include opacity(1);
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        color: $color-active;
+                    }
+                }
+            }
+        }
+    }
+}
